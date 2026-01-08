@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auser Email Trasporti - Download</title>
+   <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSP7RA65gmp36p1oDQzLMhHDuGLKb0PYwGkH6tyh3fghi4zku3Ik8tEN-F&s=10">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .logo-container {
+            margin-bottom: 25px;
+        }
+
+        .logo-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 8px 30px rgba(144, 238, 144, 0.4);
+            background: white;
+            border: 4px solid #90EE90;
+        }
+
+        h1 {
+            color: #000;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .card {
+            background: white;
+            padding: 45px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border: 2px solid #f0f0f0;
+            animation: fadeInUp 0.8s ease;
+            margin-bottom: 25px;
+        }
+
+        .card:hover {
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+            border-color: #90EE90;
+            transition: all 0.3s ease;
+        }
+
+        .feature-list {
+            margin: 30px 0;
+            display: grid;
+            gap: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 18px;
+            background: linear-gradient(135deg, #f9fff9 0%, #f0fff0 100%);
+            border-radius: 12px;
+            border: 2px solid #e8f5e8;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateX(5px);
+            border-color: #90EE90;
+            box-shadow: 0 4px 15px rgba(144, 238, 144, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 28px;
+            margin-right: 18px;
+            flex-shrink: 0;
+        }
+
+        .feature-text {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #90EE90 0%, #7FD87F 100%);
+            color: #000;
+            text-decoration: none;
+            padding: 20px 45px;
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(144, 238, 144, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(144, 238, 144, 0.5);
+        }
+
+        .download-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .download-icon {
+            font-size: 28px;
+            margin-right: 12px;
+        }
+
+        .info-box {
+            background: #fff9e6;
+            border: 2px solid #ffe066;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 25px;
+        }
+
+        .info-box h3 {
+            color: #000;
+            font-size: 18px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .info-box h3::before {
+            content: "ℹ️";
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .info-box p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .info-box ul {
+            margin: 15px 0 0 20px;
+            color: #666;
+        }
+
+        .info-box li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .requirements {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            border: 2px solid #f0f0f0;
+            margin-top: 25px;
+        }
+
+        .requirements h3 {
+            color: #000;
+            font-size: 20px;
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+
+        .requirements ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .requirements li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            color: #666;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .requirements li:last-child {
+            border-bottom: none;
+        }
+
+        .requirements li::before {
+            content: "✓";
+            color: #90EE90;
+            font-weight: bold;
+            font-size: 20px;
+            margin-right: 12px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #999;
+            font-size: 14px;
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .card {
+                padding: 30px 25px;
+            }
+
+            .download-btn {
+                padding: 18px 35px;
+                font-size: 18px;
+            }
+
+            .feature-item {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSP7RA65gmp36p1oDQzLMhHDuGLKb0PYwGkH6tyh3fghi4zku3Ik8tEN-F&s=10" alt="Logo Auser" class="logo-image">
+            </div>
+            <h1>Auser Email Trasporti</h1>
+            <p class="subtitle">Sistema di gestione automatizzata per l'invio delle email ai volontari</p>
+        </div>
+
+        <div class="card">
+            <h2 style="color: #000; font-size: 28px; margin-bottom: 25px; font-weight: 600;">Funzionalità Principali</h2>
+            
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-icon">📧</div>
+                    <div class="feature-text">
+                        <strong>Invio automatico email</strong> - Elabora file Excel e invia email personalizzate a ciascun volontario con i propri turni
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-text">
+                        <strong>Elaborazione Excel avanzata</strong> - Supporta file .xlsx e .xls con selezione multipla dei fogli da processare
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">👥</div>
+                    <div class="feature-text">
+                        <strong>Gestione volontari</strong> - Interfaccia intuitiva per aggiungere, modificare ed esportare la lista dei volontari
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">⚙️</div>
+                    <div class="feature-text">
+                        <strong>Configurazione semplice</strong> - Impostazioni email Gmail con supporto per password per le app
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">💾</div>
+                    <div class="feature-text">
+                        <strong>Import/Export configurazioni</strong> - Salva e condividi facilmente credenziali e lista volontari in formato JSON
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">🎨</div>
+                    <div class="feature-text">
+                        <strong>Interfaccia moderna</strong> - Design pulito e responsive con feedback visivo per ogni operazione
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://www.dropbox.com/scl/fi/htcxgjf8zylrn1wbld83m/Auser_Email_Trasporti.zip?rlkey=6l9gqw2gh7wo06i5685g6enwb&st=t9nqoytk&dl=1" class="download-btn">
+                <span class="download-icon">⬇️</span>
+                Scarica Applicazione
+            </a>
+
+            <div class="info-box">
+                <h3>Istruzioni per l'installazione</h3>
+                <ul>
+                    <li>Scarica il file ZIP cliccando sul pulsante sopra</li>
+                    <li>Estrai il contenuto in una cartella a tua scelta</li>
+                    <li>Segui le istruzioni contenute nel file LEGGIMI.txt</li>
+                    <li>Configura le credenziali email e la lista dei volontari</li>
+                    <li>Inizia a inviare email automaticamente ai volontari!</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="requirements">
+            <h3>Requisiti di Sistema</h3>
+            <ul>
+                <li>Connessione internet attiva per l'invio delle email</li>
+                <li>Account Gmail con "Password per le app" configurata</li>
+                <li>File Excel (.xlsx o .xls) con i dati dei trasporti</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Lombardi Luca Remo - Sistema di Gestione Email Trasporti</p>
+        </div>
+    </div>
+</body>
+</html>
